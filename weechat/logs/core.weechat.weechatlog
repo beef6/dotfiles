@@ -1,0 +1,439 @@
+2021-12-22 18:23:09		New key binding (context "default"): meta2-1;5P => /bar scroll buflist * -100%
+2021-12-22 18:23:09		New key binding (context "default"): meta2-1;5Q => /bar scroll buflist * +100%
+2021-12-22 18:23:09		New key binding (context "default"): meta-meta-OQ => /bar scroll buflist * e
+2021-12-22 18:23:09		New key binding (context "default"): meta2-1;3Q => /bar scroll buflist * e
+2021-12-22 18:23:09		New key binding (context "default"): meta2-1;3P => /bar scroll buflist * b
+2021-12-22 18:23:09		New key binding (context "default"): meta-meta-OP => /bar scroll buflist * b
+2021-12-22 18:23:09		New key binding (context "default"): meta-B => /buflist toggle
+2021-12-22 18:23:09		New key binding (context "default"): meta-OQ => /bar scroll buflist * +100%
+2021-12-22 18:23:09		New key binding (context "default"): meta-OP => /bar scroll buflist * -100%
+2021-12-22 18:23:09		New key binding (context "default"): meta-meta2-12~ => /bar scroll buflist * e
+2021-12-22 18:23:09		New key binding (context "default"): meta-meta2-11~ => /bar scroll buflist * b
+2021-12-22 18:23:09		New key binding (context "default"): meta2-12^ => /bar scroll buflist * +100%
+2021-12-22 18:23:09		New key binding (context "default"): meta2-12~ => /bar scroll buflist * +100%
+2021-12-22 18:23:09		New key binding (context "default"): meta2-11^ => /bar scroll buflist * -100%
+2021-12-22 18:23:09		New key binding (context "default"): meta2-11~ => /bar scroll buflist * -100%
+2021-12-22 18:23:09		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, ruby, script, spell, trigger, xfer
+2021-12-22 18:23:25		irc: server added: rizon
+2021-12-22 18:23:44	=!=	irc: server "rizon" already exists, can't add it!
+2021-12-22 18:23:49	=!=	Error with command "/server delete rizon" (help on command: /help server)
+2021-12-22 18:23:52		[irc]  /server  list|listfull [<name>]
+2021-12-22 18:23:52		                add <name> <hostname>[/<port>] [-temp] [-<option>[=<value>]] [-no<option>]
+2021-12-22 18:23:52		                copy|rename <name> <new_name>
+2021-12-22 18:23:52		                reorder <name> [<name>...]
+2021-12-22 18:23:52		                open <name>|-all [<name>...]
+2021-12-22 18:23:52		                del|keep <name>
+2021-12-22 18:23:52		                deloutq|jump
+2021-12-22 18:23:52		                raw [<filter>]
+2021-12-22 18:23:52		list, add or remove IRC servers
+2021-12-22 18:23:52		    list: list servers (without argument, this list is displayed)
+2021-12-22 18:23:52		listfull: list servers with detailed info for each server
+2021-12-22 18:23:52		     add: add a new server
+2021-12-22 18:23:52		    name: server name, for internal and display use; this name is used to connect to the server (/connect name) and to set server options: irc.server.name.xxx
+2021-12-22 18:23:52		hostname: name or IP address of server, with optional port (default: 6667), many addresses can be separated by a comma
+2021-12-22 18:23:52		   -temp: add a temporary server (not saved)
+2021-12-22 18:23:52		  option: set option for server (for boolean option, value can be omitted)
+2021-12-22 18:23:52		nooption: set boolean option to 'off' (for example: -nossl)
+2021-12-22 18:23:52		    copy: duplicate a server
+2021-12-22 18:23:52		  rename: rename a server
+2021-12-22 18:23:52		 reorder: reorder list of servers
+2021-12-22 18:23:52		    open: open the server buffer without connecting
+2021-12-22 18:23:52		    keep: keep server in config file (for temporary servers only)
+2021-12-22 18:23:52		     del: delete a server
+2021-12-22 18:23:52		 deloutq: delete messages out queue for all servers (all messages WeeChat is currently sending)
+2021-12-22 18:23:52		    jump: jump to server buffer
+2021-12-22 18:23:52		     raw: open buffer with raw IRC data
+2021-12-22 18:23:52		  filter: set a new filter to see only matching messages (this filter can be used as input in raw IRC data buffer as well); allowed formats are:
+2021-12-22 18:23:52		            *       show all messages (no filter)
+2021-12-22 18:23:52		            xxx     show only messages containing "xxx"
+2021-12-22 18:23:52		            s:xxx   show only messages for server "xxx"
+2021-12-22 18:23:52		            f:xxx   show only messages with a flag: recv (message received), sent (message sent), modified (message modified by a modifier), redirected (message redirected)
+2021-12-22 18:23:52		            m:xxx   show only IRC command "xxx"
+2021-12-22 18:23:52		            c:xxx   show only messages matching the evaluated condition "xxx", using following variables: output of function irc_message_parse (like nick, command, channel, text, etc., see function info_get_hashtable in plugin API reference for the list of all variables), date (format: "yyyy-mm-dd hh:mm:ss"), server, recv, sent, modified, redirected
+2021-12-22 18:23:52		Examples:
+2021-12-22 18:23:52		  /server listfull
+2021-12-22 18:23:52		  /server add freenode chat.freenode.net
+2021-12-22 18:23:52		  /server add freenode chat.freenode.net/6697 -ssl -autoconnect
+2021-12-22 18:23:52		  /server add chatspike irc.chatspike.net/6667,irc.duckspike.net/6667
+2021-12-22 18:23:52		  /server copy freenode freenode-test
+2021-12-22 18:23:52		  /server rename freenode-test freenode2
+2021-12-22 18:23:52		  /server reorder freenode2 freenode
+2021-12-22 18:23:52		  /server del freenode
+2021-12-22 18:23:52		  /server deloutq
+2021-12-22 18:23:52		  /server raw
+2021-12-22 18:23:52		  /server raw s:freenode
+2021-12-22 18:23:52		  /server raw c:${recv} && ${command}==PRIVMSG && ${nick}==foo
+2021-12-22 18:24:05		irc: server rizon has been deleted
+2021-12-22 18:24:11		irc: server added: rizon
+2021-12-22 19:34:07		fifo: pipe closed
+2021-12-22 19:38:19		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, ruby, script, spell, trigger, xfer
+2021-12-22 19:57:27		Key "meta-n" unbound (context: "default")
+2021-12-22 19:57:27		New key binding (context "default"): meta-n => /bar toggle nicklist
+2021-12-22 19:57:36		Key "meta-b" unbound (context: "default")
+2021-12-22 19:57:36		New key binding (context "default"): meta-b => /bar toggle buflist
+2021-12-22 21:03:38	=!=	script: download of scripts is disabled by default; see /help script.scripts.download_enabled
+2021-12-22 21:03:54		Option "script.scripts.download_enabled":
+2021-12-22 21:03:54		  description: enable download of files from the scripts repository when the /script command is used (list of scripts and scripts themselves); the list of scripts is downloaded from the URL specified in the option script.scripts.url; WeeChat will sometimes download again the list of scripts when you use the /script command, even if you don't install a script
+2021-12-22 21:03:54		  type: boolean
+2021-12-22 21:03:54		  values: on, off
+2021-12-22 21:03:54		  default value: off
+2021-12-22 21:03:54		  current value: off
+2021-12-22 21:04:01		Option "script.scripts.download_enabled":
+2021-12-22 21:04:01		  description: enable download of files from the scripts repository when the /script command is used (list of scripts and scripts themselves); the list of scripts is downloaded from the URL specified in the option script.scripts.url; WeeChat will sometimes download again the list of scripts when you use the /script command, even if you don't install a script
+2021-12-22 21:04:01		  type: boolean
+2021-12-22 21:04:01		  values: on, off
+2021-12-22 21:04:01		  default value: off
+2021-12-22 21:04:01		  current value: off
+2021-12-22 21:04:21	=!=	Error: unknown command "/script.scripts.download_enabled" (type /help for help)
+2021-12-22 21:04:45	=!=	Error: unknown command "/scripts" (type /help for help)
+2021-12-22 21:04:54	=!=	Error with command "/script scripts.download_enabled on" (help on command: /help script)
+2021-12-22 21:04:58		[script]  /script  list [-o|-ol|-i|-il]
+2021-12-22 21:04:58		                   search <text>
+2021-12-22 21:04:58		                   show <script>
+2021-12-22 21:04:58		                   load|unload|reload <script> [<script>...]
+2021-12-22 21:04:58		                   autoload|noautoload|toggleautoload <script> [<script>...]
+2021-12-22 21:04:58		                   install|remove|installremove|hold [-q] <script> [<script>...]
+2021-12-22 21:04:58		                   upgrade
+2021-12-22 21:04:58		                   update
+2021-12-22 21:04:58		WeeChat script manager
+2021-12-22 21:04:58		          list: list loaded scripts (all languages)
+2021-12-22 21:04:58		            -o: send list of loaded scripts to buffer (string in English)
+2021-12-22 21:04:58		           -ol: send list of loaded scripts to buffer (translated string)
+2021-12-22 21:04:58		            -i: copy list of loaded scripts in command line (for sending to buffer) (string in English)
+2021-12-22 21:04:58		           -il: copy list of loaded scripts in command line (for sending to buffer) (translated string)
+2021-12-22 21:04:58		        search: search scripts by tags, language (python, perl, ...), filename extension (py, pl, ...) or text; result is displayed on scripts buffer
+2021-12-22 21:04:58		          show: show detailed info about a script
+2021-12-22 21:04:58		          load: load script(s)
+2021-12-22 21:04:58		        unload: unload script(s)
+2021-12-22 21:04:58		        reload: reload script(s)
+2021-12-22 21:04:58		      autoload: autoload the script
+2021-12-22 21:04:58		    noautoload: do not autoload the script
+2021-12-22 21:04:58		toggleautoload: toggle autoload
+2021-12-22 21:04:58		       install: install/upgrade script(s)
+2021-12-22 21:04:58		        remove: remove script(s)
+2021-12-22 21:04:58		 installremove: install or remove script(s), depending on current state
+2021-12-22 21:04:58		          hold: hold/unhold script(s) (a script held will not be upgraded any more and cannot be removed)
+2021-12-22 21:04:58		            -q: quiet mode: do not display messages
+2021-12-22 21:04:58		       upgrade: upgrade all installed scripts which are obsolete (new version available)
+2021-12-22 21:04:58		        update: update local scripts cache
+2021-12-22 21:04:58		Without argument, this command opens a buffer with list of scripts.
+2021-12-22 21:04:58		On script buffer, the possible status for each script are:
+2021-12-22 21:04:58		  * i a H r N
+2021-12-22 21:04:58		  | | | | | |
+2021-12-22 21:04:58		  | | | | | obsolete (new version available)
+2021-12-22 21:04:58		  | | | | running (loaded)
+2021-12-22 21:04:58		  | | | held
+2021-12-22 21:04:58		  | | autoloaded
+2021-12-22 21:04:58		  | installed
+2021-12-22 21:04:58		  popular script
+2021-12-22 21:04:58		Keys on script buffer:
+2021-12-22 21:04:58		  alt+i  install script
+2021-12-22 21:04:58		  alt+r  remove script
+2021-12-22 21:04:58		  alt+l  load script
+2021-12-22 21:04:58		  alt+L  reload script
+2021-12-22 21:04:58		  alt+u  unload script
+2021-12-22 21:04:58		  alt+A  autoload script
+2021-12-22 21:04:58		  alt+h  (un)hold script
+2021-12-22 21:04:58		  alt+v  view script
+2021-12-22 21:04:58		Input allowed on script buffer:
+2021-12-22 21:04:58		  i/r/l/L/u/A/h/v  action on script (same as keys above)
+2021-12-22 21:04:58		  q                close buffer
+2021-12-22 21:04:58		  $                refresh buffer
+2021-12-22 21:04:58		  s:x,y            sort buffer using keys x and y (see /help script.look.sort)
+2021-12-22 21:04:58		  s:               reset sort (use default sort)
+2021-12-22 21:04:58		  word(s)          filter scripts: search word(s) in scripts (description, tags, ...)
+2021-12-22 21:04:58		  *                remove filter
+2021-12-22 21:04:58		Mouse actions on script buffer:
+2021-12-22 21:04:58		  wheel         scroll list
+2021-12-22 21:04:58		  left button   select script
+2021-12-22 21:04:58		  right button  install/remove script
+2021-12-22 21:04:58		Examples:
+2021-12-22 21:04:58		  /script search url
+2021-12-22 21:04:58		  /script install go.py urlserver.py
+2021-12-22 21:04:58		  /script remove go.py
+2021-12-22 21:04:58		  /script hold urlserver.py
+2021-12-22 21:04:58		  /script reload urlserver
+2021-12-22 21:04:58		  /script upgrade
+2021-12-22 21:06:08	=!=	script: download of scripts is disabled by default; see /help script.scripts.download_enabled
+2021-12-22 21:06:34		Option "script.scripts.download_enabled":
+2021-12-22 21:06:34		  description: enable download of files from the scripts repository when the /script command is used (list of scripts and scripts themselves); the list of scripts is downloaded from the URL specified in the option script.scripts.url; WeeChat will sometimes download again the list of scripts when you use the /script command, even if you don't install a script
+2021-12-22 21:06:34		  type: boolean
+2021-12-22 21:06:34		  values: on, off
+2021-12-22 21:06:34		  default value: off
+2021-12-22 21:06:34		  current value: off
+2021-12-22 21:08:42	=!=	script: download of scripts is disabled by default; see /help script.scripts.download_enabled
+2021-12-22 21:09:06	=!=	No help available, "option" is not a command or an option
+2021-12-22 21:09:16		[script]  /script  list [-o|-ol|-i|-il]
+2021-12-22 21:09:16		                   search <text>
+2021-12-22 21:09:16		                   show <script>
+2021-12-22 21:09:16		                   load|unload|reload <script> [<script>...]
+2021-12-22 21:09:16		                   autoload|noautoload|toggleautoload <script> [<script>...]
+2021-12-22 21:09:16		                   install|remove|installremove|hold [-q] <script> [<script>...]
+2021-12-22 21:09:16		                   upgrade
+2021-12-22 21:09:16		                   update
+2021-12-22 21:09:16		WeeChat script manager
+2021-12-22 21:09:16		          list: list loaded scripts (all languages)
+2021-12-22 21:09:16		            -o: send list of loaded scripts to buffer (string in English)
+2021-12-22 21:09:16		           -ol: send list of loaded scripts to buffer (translated string)
+2021-12-22 21:09:16		            -i: copy list of loaded scripts in command line (for sending to buffer) (string in English)
+2021-12-22 21:09:16		           -il: copy list of loaded scripts in command line (for sending to buffer) (translated string)
+2021-12-22 21:09:16		        search: search scripts by tags, language (python, perl, ...), filename extension (py, pl, ...) or text; result is displayed on scripts buffer
+2021-12-22 21:09:16		          show: show detailed info about a script
+2021-12-22 21:09:16		          load: load script(s)
+2021-12-22 21:09:16		        unload: unload script(s)
+2021-12-22 21:09:16		        reload: reload script(s)
+2021-12-22 21:09:16		      autoload: autoload the script
+2021-12-22 21:09:16		    noautoload: do not autoload the script
+2021-12-22 21:09:16		toggleautoload: toggle autoload
+2021-12-22 21:09:16		       install: install/upgrade script(s)
+2021-12-22 21:09:16		        remove: remove script(s)
+2021-12-22 21:09:16		 installremove: install or remove script(s), depending on current state
+2021-12-22 21:09:16		          hold: hold/unhold script(s) (a script held will not be upgraded any more and cannot be removed)
+2021-12-22 21:09:16		            -q: quiet mode: do not display messages
+2021-12-22 21:09:16		       upgrade: upgrade all installed scripts which are obsolete (new version available)
+2021-12-22 21:09:16		        update: update local scripts cache
+2021-12-22 21:09:16		Without argument, this command opens a buffer with list of scripts.
+2021-12-22 21:09:16		On script buffer, the possible status for each script are:
+2021-12-22 21:09:16		  * i a H r N
+2021-12-22 21:09:16		  | | | | | |
+2021-12-22 21:09:16		  | | | | | obsolete (new version available)
+2021-12-22 21:09:16		  | | | | running (loaded)
+2021-12-22 21:09:16		  | | | held
+2021-12-22 21:09:16		  | | autoloaded
+2021-12-22 21:09:16		  | installed
+2021-12-22 21:09:16		  popular script
+2021-12-22 21:09:16		Keys on script buffer:
+2021-12-22 21:09:16		  alt+i  install script
+2021-12-22 21:09:16		  alt+r  remove script
+2021-12-22 21:09:16		  alt+l  load script
+2021-12-22 21:09:16		  alt+L  reload script
+2021-12-22 21:09:16		  alt+u  unload script
+2021-12-22 21:09:16		  alt+A  autoload script
+2021-12-22 21:09:16		  alt+h  (un)hold script
+2021-12-22 21:09:16		  alt+v  view script
+2021-12-22 21:09:16		Input allowed on script buffer:
+2021-12-22 21:09:16		  i/r/l/L/u/A/h/v  action on script (same as keys above)
+2021-12-22 21:09:16		  q                close buffer
+2021-12-22 21:09:16		  $                refresh buffer
+2021-12-22 21:09:16		  s:x,y            sort buffer using keys x and y (see /help script.look.sort)
+2021-12-22 21:09:16		  s:               reset sort (use default sort)
+2021-12-22 21:09:16		  word(s)          filter scripts: search word(s) in scripts (description, tags, ...)
+2021-12-22 21:09:16		  *                remove filter
+2021-12-22 21:09:16		Mouse actions on script buffer:
+2021-12-22 21:09:16		  wheel         scroll list
+2021-12-22 21:09:16		  left button   select script
+2021-12-22 21:09:16		  right button  install/remove script
+2021-12-22 21:09:16		Examples:
+2021-12-22 21:09:16		  /script search url
+2021-12-22 21:09:16		  /script install go.py urlserver.py
+2021-12-22 21:09:16		  /script remove go.py
+2021-12-22 21:09:16		  /script hold urlserver.py
+2021-12-22 21:09:16		  /script reload urlserver
+2021-12-22 21:09:16		  /script upgrade
+2021-12-22 21:10:30		Options reloaded from sec.conf
+2021-12-22 21:10:30		Options reloaded from weechat.conf
+2021-12-22 21:10:30		Options reloaded from plugins.conf
+2021-12-22 21:10:30		Options reloaded from charset.conf
+2021-12-22 21:10:30		Options reloaded from logger.conf
+2021-12-22 21:10:30		Options reloaded from exec.conf
+2021-12-22 21:10:30		Options reloaded from trigger.conf
+2021-12-22 21:10:30		Options reloaded from spell.conf
+2021-12-22 21:10:30		Options reloaded from alias.conf
+2021-12-22 21:10:30		Options reloaded from buflist.conf
+2021-12-22 21:10:30		Options reloaded from fifo.conf
+2021-12-22 21:10:30		Options reloaded from xfer.conf
+2021-12-22 21:10:30		Options reloaded from irc.conf
+2021-12-22 21:10:30		Options reloaded from relay.conf
+2021-12-22 21:10:30		Options reloaded from perl.conf
+2021-12-22 21:10:30		Options reloaded from python.conf
+2021-12-22 21:10:30		Options reloaded from ruby.conf
+2021-12-22 21:10:30		Options reloaded from script.conf
+2021-12-22 21:10:30		Options reloaded from fset.conf
+2021-12-22 21:10:41		script: downloading list of scripts...
+2021-12-22 21:10:43		script: 368 scripts for WeeChat 3.0
+2021-12-22 21:10:44		perl: loading script "/home/austin/.weechat/perl/perlexec.pl"
+2021-12-22 21:10:44		perl: registered script "perlexec", version 0.1 (Execute perl code)
+2021-12-22 21:10:45		python: loading script "/home/austin/.weechat/python/buffer_autoclose.py"
+2021-12-22 21:10:45		python: registered script "buffer_autoclose", version 0.5 (Automatically close inactive private message buffers)
+2021-12-22 21:10:46		python: loading script "/home/austin/.weechat/python/go.py"
+2021-12-22 21:10:46		python: registered script "go", version 2.7 (Quick jump to buffers)
+2021-12-22 21:10:47		python: loading script "/home/austin/.weechat/python/colorize_nicks.py"
+2021-12-22 21:10:47		python: registered script "colorize_nicks", version 28 (Use the weechat nick colors in the chat area)
+2021-12-22 21:10:48		python: loading script "/home/austin/.weechat/python/autosort.py"
+2021-12-22 21:10:48		python: registered script "autosort", version 3.9 (Flexible automatic (or manual) buffer sorting based on eval expressions.)
+2021-12-22 21:10:48		python: loading script "/home/austin/.weechat/python/zerotab.py"
+2021-12-22 21:10:48		python: registered script "zerotab", version 1.5 (Will tab complete the last nick in channel without typing anything first. This is good for rapid conversations.)
+2021-12-22 21:10:50		python: loading script "/home/austin/.weechat/python/urlserver.py"
+2021-12-22 21:10:50		python: registered script "urlserver", version 2.6 (Shorten URLs with own HTTP server)
+2021-12-22 21:10:50		URL server listening on ('127.0.1.1', 40985)
+2021-12-22 21:12:20		Option changed: weechat.bar.status.color_bg = 0  (default: blue)
+2021-12-22 21:12:28		Option changed: weechat.bar.title.color_bg = 0  (default: blue)
+2021-12-22 21:12:43		Option changed: weechat.color.chat_nick_colors = "1,2,3,4,5,6"  (default: "cyan,magenta,green,brown,lightblue,default,lightcyan,lightmagenta,lightgreen,blue")
+2021-12-22 21:13:00		Option changed: weechat.color.chat_highlight = 7  (default: yellow)
+2021-12-22 21:13:25		Option changed: buflist.format.hotlist_message = "${color:7}"  (default: "${color:brown}")
+2021-12-22 21:13:25		Option changed: buflist.format.buffer_current = "${color:,7}${format_buffer}"  (default: "${color:,blue}${format_buffer}")
+2021-12-22 21:13:45		Option changed: weechat.bar.buflist.position = top  (default: left)
+2021-12-22 21:13:54		Option changed: weechat.bar.buflist.items = "buflist"  (default: "")
+2021-12-22 21:14:19		autosort: Sorting rules:
+2021-12-22 21:14:19		    0: ${core_first}
+2021-12-22 21:14:19		    1: ${info:autosort_order,${info:autosort_escape,${script_or_plugin}},core,*,irc,bitlbee,matrix,slack}
+2021-12-22 21:14:19		    2: ${script_or_plugin}
+2021-12-22 21:14:19		    3: ${irc_raw_first}
+2021-12-22 21:14:19		    4: ${server}
+2021-12-22 21:14:19		    5: ${info:autosort_order,${type},server,*,channel,private}
+2021-12-22 21:14:19		    6: ${hashless_name}
+2021-12-22 21:14:19		    7: ${buffer.full_name}
+2021-12-22 21:14:19		    8: irc.server.*.&* = 0
+2021-12-22 21:14:19		autosort: Sorting rules:
+2021-12-22 21:14:19		    0: ${core_first}
+2021-12-22 21:14:19		    1: ${info:autosort_order,${info:autosort_escape,${script_or_plugin}},core,*,irc,bitlbee,matrix,slack}
+2021-12-22 21:14:19		    2: ${script_or_plugin}
+2021-12-22 21:14:19		    3: ${irc_raw_first}
+2021-12-22 21:14:19		    4: ${server}
+2021-12-22 21:14:19		    5: ${info:autosort_order,${type},server,*,channel,private}
+2021-12-22 21:14:19		    6: ${hashless_name}
+2021-12-22 21:14:19		    7: ${buffer.full_name}
+2021-12-22 21:14:19		    8: irc.server.*.&* = 0
+2021-12-22 21:14:19		    9: irc.server.*.#* = 1
+2021-12-22 21:14:19		autosort: Sorting rules:
+2021-12-22 21:14:19		    0: ${core_first}
+2021-12-22 21:14:19		    1: ${info:autosort_order,${info:autosort_escape,${script_or_plugin}},core,*,irc,bitlbee,matrix,slack}
+2021-12-22 21:14:19		    2: ${script_or_plugin}
+2021-12-22 21:14:19		    3: ${irc_raw_first}
+2021-12-22 21:14:19		    4: ${server}
+2021-12-22 21:14:19		    5: ${info:autosort_order,${type},server,*,channel,private}
+2021-12-22 21:14:19		    6: ${hashless_name}
+2021-12-22 21:14:19		    7: ${buffer.full_name}
+2021-12-22 21:14:19		    8: irc.server.*.&* = 0
+2021-12-22 21:14:19		    9: irc.server.*.#* = 1
+2021-12-22 21:14:19		    10: irc.server.*.\*status = 2
+2021-12-22 21:14:19		Option changed: irc.look.server_buffer = independent  (default: merge_with_core)
+2021-12-22 21:14:19		Option changed: weechat.look.hotlist_add_conditions = "${away} || ${buffer} != ${window.buffer}"  (default: "${away} || ${buffer.num_displayed} == 0 || ${info:relay_client_count,weechat,connected} > 0")
+2021-12-22 21:15:00		Option changed: weechat.look.prefix_same_nick = "⤷"  (default: "")
+2021-12-22 21:15:00		Option changed: weechat.look.prefix_error = "⚠"  (default: "=!=")
+2021-12-22 21:15:00		Option changed: weechat.look.prefix_network = "ℹ "  (default: "--")
+2021-12-22 21:15:00		Option changed: weechat.look.prefix_action = "⚡"  (default: " *")
+2021-12-22 21:15:00		Option changed: weechat.look.bar_more_down = "▼▼"  (default: "++")
+2021-12-22 21:15:00		Option changed: weechat.look.bar_more_left = "◀◀"  (default: "<<")
+2021-12-22 21:15:00		Option changed: weechat.look.bar_more_right = "▶▶"  (default: ">>")
+2021-12-22 21:15:00		Option changed: weechat.look.bar_more_up = "▲▲"  (default: "--")
+2021-12-22 21:15:00		Option changed: weechat.look.prefix_suffix = "╡"  (default: "|")
+2021-12-22 21:15:15		Option changed: weechat.look.prefix_align_max = 15  (default: 0)
+2021-12-22 21:15:22		Option changed: weechat.look.buffer_time_format = "${color:253}%H${color:245}%M"  (default: "%H:%M:%S")
+2021-12-22 21:15:48		Trigger "windowswitch" created
+2021-12-22 21:15:48		Trigger "bufferswitch" created
+2021-12-22 21:15:48		Trigger "force_redraw" created
+2021-12-22 21:15:48		Trigger "detach" created
+2021-12-22 21:15:48		Trigger "reattach" created
+2021-12-22 21:15:48		Trigger "reattach_on_switch" created
+2021-12-22 21:16:00		Notify changed for "core.weechat": "all" to "message"
+2021-12-22 21:16:00		Notify changed for "irc.server.rizon": "all" to "message"
+2021-12-22 21:16:00		Notify changed for "irc.rizon.#/g/punk": "all" to "message"
+2021-12-22 21:16:00		Notify changed for "irc.rizon.#al/ck/": "all" to "message"
+2021-12-22 21:16:00		Option changed: weechat.look.buffer_notify_default = message  (default: all)
+2021-12-22 21:16:00		Option changed: irc.look.smart_filter = on
+2021-12-22 21:16:00		Filter "irc_smart" added:
+2021-12-22 21:16:00		  [irc_smart] buffer: * / tags: irc_smart_filter / regex: * 
+2021-12-22 21:16:00	⚠	Too few arguments for command "/filter add" (help on command: /help filter)
+2021-12-22 21:16:15		Option changed: weechat.look.buffer_notify_default = message  (default: all)
+2021-12-22 21:16:15		Option changed: irc.look.smart_filter = on
+2021-12-22 21:16:15	⚠	Error adding filter "irc_smart": a filter with same name already exists (choose another name or use option "addreplace" to overwrite it)
+2021-12-22 21:16:15		Filter "irc_join_names" added:
+2021-12-22 21:16:15		  [irc_join_names] buffer: * / tags: irc_366,irc_332,irc_333,irc_329,irc_324 / regex: * 
+2021-12-22 21:16:36	⚠	Error: it is not safe to bind key "super-g" because it does not start with a ctrl or meta code (tip: use alt-k to find key codes); if you want to bind this key anyway, turn off option weechat.look.key_bind_safe
+2021-12-22 21:17:17		New key binding (context "default"): meta-g => /go
+2021-12-22 21:17:25		Key "meta-n" unbound (context: "default")
+2021-12-22 21:17:25		New key binding (context "default"): meta-n => /bar toggle nicklist
+2021-12-22 21:17:36		Key "meta-b" unbound (context: "default")
+2021-12-22 21:17:36		New key binding (context "default"): meta-b => /bar toggle buflist
+2021-12-23 09:29:53		[irc]  /nick  [-all] <nick>
+2021-12-23 09:29:53		change current nick
+2021-12-23 09:29:53		-all: set new nick for all connected servers
+2021-12-23 09:29:53		nick: new nick
+2021-12-23 09:30:09		[core]
+2021-12-23 09:30:09		  away     command  filter   key      plugin   reload   set      version
+2021-12-23 09:30:09		  bar      cursor   help     layout   print    repeat   unset    wait   
+2021-12-23 09:30:09		  buffer   debug    history  mouse    proxy    save     upgrade  window 
+2021-12-23 09:30:09		  color    eval     input    mute     quit     secure   uptime 
+2021-12-23 09:30:09		[perl]
+2021-12-23 09:30:09		  perl  perlexec
+2021-12-23 09:30:09		[charset]
+2021-12-23 09:30:09		  charset
+2021-12-23 09:30:09		[spell]
+2021-12-23 09:30:09		  spell
+2021-12-23 09:30:09		[exec]
+2021-12-23 09:30:09		  exec
+2021-12-23 09:30:09		[alias]
+2021-12-23 09:30:09		  AAWAY    C        IG       M        REDRAW   UMODE    WII    
+2021-12-23 09:30:09		  alias    CHAT     J        MSGBUF   SAY      V        WM     
+2021-12-23 09:30:09		  ANICK    CL       K        MUB      SIGNOFF  W        WW     
+2021-12-23 09:30:09		  BEEP     CLOSE    KB       N        T        WC     
+2021-12-23 09:30:09		  BYE      EXIT     LEAVE    Q        UB       WI     
+2021-12-23 09:30:09		[logger]
+2021-12-23 09:30:09		  logger
+2021-12-23 09:30:09		[trigger]
+2021-12-23 09:30:09		  trigger
+2021-12-23 09:30:09		[python]
+2021-12-23 09:30:09		  autosort  go  python  urlserver
+2021-12-23 09:30:09		[irc]
+2021-12-23 09:30:09		  admin       die         lusers      ping        saquit      userhost  
+2021-12-23 09:30:09		  allchan     disconnect  map         pong        server      users     
+2021-12-23 09:30:09		  allpv       halfop      me          query       service     version   
+2021-12-23 09:30:09		  allserv     ignore      mode        quiet       servlist    voice     
+2021-12-23 09:30:09		  ban         info        motd        quote       squery      wallchops 
+2021-12-23 09:30:09		  cap         invite      msg         reconnect   squit       wallops   
+2021-12-23 09:30:09		  connect     ison        names       rehash      stats       who       
+2021-12-23 09:30:09		  ctcp        join        nick        remove      summon      whois     
+2021-12-23 09:30:09		  cycle       kick        notice      restart     time        whowas    
+2021-12-23 09:30:09		  dcc         kickban     notify      sajoin      topic     
+2021-12-23 09:30:09		  dehalfop    kill        op          samode      trace     
+2021-12-23 09:30:09		  deop        links       oper        sanick      unban     
+2021-12-23 09:30:09		  devoice     list        part        sapart      unquiet   
+2021-12-23 09:30:09		[script]
+2021-12-23 09:30:09		  script
+2021-12-23 09:30:09		[relay]
+2021-12-23 09:30:09		  relay
+2021-12-23 09:30:09		[fifo]
+2021-12-23 09:30:09		  fifo
+2021-12-23 09:30:09		[xfer]
+2021-12-23 09:30:09		  me  xfer
+2021-12-23 09:30:09		[buflist]
+2021-12-23 09:30:09		  buflist
+2021-12-23 09:30:09		[fset]
+2021-12-23 09:30:09		  fset
+2021-12-23 09:30:09		[ruby]
+2021-12-23 09:30:09		  ruby
+2021-12-23 09:30:40	⚠	No help available, "irc" is not a command or an option
+2021-12-23 09:30:47		[irc]  /nick  [-all] <nick>
+2021-12-23 09:30:47		change current nick
+2021-12-23 09:30:47		-all: set new nick for all connected servers
+2021-12-23 09:30:47		nick: new nick
+2021-12-23 09:31:01		[irc]  /nick  [-all] <nick>
+2021-12-23 09:31:01		change current nick
+2021-12-23 09:31:01		-all: set new nick for all connected servers
+2021-12-23 09:31:01		nick: new nick
+2021-12-24 08:46:50		fifo: pipe closed
+2021-12-24 08:46:50		URL server stopped
+2021-12-24 08:46:50		python: scripts unloaded
+2021-12-24 08:47:13		perl scripts loaded: perlexec
+2021-12-24 08:47:13		URL server listening on ('127.0.1.1', 35521)
+2021-12-24 08:47:13		python scripts loaded: autosort, buffer_autoclose, colorize_nicks, go, urlserver, zerotab
+2021-12-24 08:47:13		script: 368 scripts for WeeChat 3.0
+2021-12-24 08:47:13		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, ruby, script, spell, trigger, xfer
+2021-12-24 15:26:06	⚠	Error: unknown command "/buf" (type /help for help)
+2021-12-24 16:59:42		fifo: pipe closed
+2021-12-24 16:59:42		URL server stopped
+2021-12-24 16:59:42		python: scripts unloaded
+2021-12-24 17:00:20		perl scripts loaded: perlexec
+2021-12-24 17:00:20		URL server listening on ('127.0.1.1', 45845)
+2021-12-24 17:00:20		python scripts loaded: autosort, buffer_autoclose, colorize_nicks, go, urlserver, zerotab
+2021-12-24 17:00:20		script: 368 scripts for WeeChat 3.0
+2021-12-24 17:00:20		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, ruby, script, spell, trigger, xfer
+2021-12-25 18:11:15		fifo: pipe closed
+2021-12-25 18:11:16		URL server stopped
+2021-12-25 18:11:16		python: scripts unloaded
+2021-12-25 18:26:17		perl scripts loaded: perlexec
+2021-12-25 18:26:17		URL server listening on ('127.0.1.1', 45131)
+2021-12-25 18:26:17		python scripts loaded: autosort, buffer_autoclose, colorize_nicks, go, urlserver, zerotab
+2021-12-25 18:26:17		script: 368 scripts for WeeChat 3.0
+2021-12-25 18:26:17		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, ruby, script, spell, trigger, xfer
